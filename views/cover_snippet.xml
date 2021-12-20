@@ -1,0 +1,28 @@
+<odoo>
+    <template id="cover_snippet" name="Cover Snippet">
+        <section class="cover_snippet parallax s_parallax_is_fixed bg-black-50 pt96 pb96 o_colored_level" data-scroll-background-ratio="1">
+            <span class="s_parallax_bg oe_img_bg"></span>
+            <div class="o_we_bg_filter bg-black-50"></div>
+                <div class="container s_allow_columns">
+                    <h1>Catchy Headline</h1>
+                    <p>Write one or two paragraphs describing your product, services or a specific feature.<br></br>
+                        To be successful your content needs to be useful to your readers.</p>
+                    <p>
+                        <a href="/contactus" class="btn btn-primary mb-2 o_default_snippet_text">Contact us</a>
+                    </p>
+                </div>
+        </section>
+    </template>
+
+    <template id="insert_cover_in_bar" inherit_id="website.snippets" name="Insert cover snippet into bar">
+    <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+<!--        ^^ this defines the position of the snippets-->
+        <t t-snippet="theme_test.cover_snippet"
+                t-thumbnail="/website/static/src/img/snippets_thumbs/s_cover.svg"/>
+<!--        in t-snippet we need to provide the theme_name and then
+            the ID of the snipped defined above
+            For the Thumbnail we provide PNG image snippet_name.png-->
+    </xpath>
+  </template>
+
+</odoo>

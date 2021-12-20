@@ -1,0 +1,44 @@
+<odoo>
+<template id="test_jumbo" name="Jumbotron snippet">
+    <section class="test_jumbo">
+        <div class="oe_snippet_thumbnail">
+            <img class="oe_snippet_thumbnail_img" src="/theme_test/static/images/snippet_services.png"/>
+<!--            <span class="oe_snippet_thumbnail_title">Button</span>-->
+        </div>
+        <section class="oe_snippet_body_jumbotron">
+            <div class="container">
+                <div class="row">
+<!--                    <div class="col-md-9 text-muted">-->
+                        <p class="mb0">
+                            <strong>50,000+ companies run Odoo to grow their businesses.</strong>
+                        </p>
+                        <p class="mb0">
+                            Check out our services and join Odoo TODAY!
+                        </p>
+<!--                    </div>-->
+                    <div class="col-md-3">
+                        <a href="/services" class="btn btn-primary btn-lg pull-right mt8">
+                            <i class="fa fa-arrow-right"></i>
+                            Contact Us Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</template>
+<!--    this is the snipped we create and we want this to be added to the page-->
+
+<template id="place_into_edit" inherit_id="website.snippets" name="Place into edit">
+    <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+<!--        ^^ this defines the position of the snippets-->
+        <t t-snippet="theme_test.test_jumbo"
+                t-thumbnail="/theme_test/static/images/snippet_default.png"/>
+<!--        in t-snippet we need to provide the theme_name and then
+            the ID of the snipped defined above
+            For the Thumbnail we provide PNG image snippet_name.png-->
+    </xpath>
+</template>
+<!--    we use this template code to add the custom snippet to the page-->
+
+</odoo>

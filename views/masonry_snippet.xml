@@ -1,0 +1,46 @@
+<odoo>
+    <template id="masonry_snippet" name="Masonry Snippet">
+        <section class="masonry_snippet o_colored_level">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6 text-center pb224 pt224 oe_img_bg o_colored_level"
+                     style="background-image: url('/theme_test/static/images/masonry.jpg');">
+                  <p>
+                      <br></br>
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <div class="row h-100">
+                    <div class="col-lg-6 pt80 text-center o_colored_level "
+                    style="background-color: #d08bae;">
+                      <h3 >A great title</h3>
+                      <p >And a great subtitle</p>
+                    </div>
+                    <div class="col-lg-6 pt80 text-center o_colored_level"
+                        style="background-color: #bbb4e3;">
+                      <h3 >A great title</h3>
+                      <p >And a great subtitle</p>
+                    </div>
+                    <div class="col-lg-6 pt80 text-center o_colored_level"
+                        style="background-color: #bbb4e3;">
+                      <h3 >A great title</h3>
+                      <p >And a great subtitle</p>
+                    </div>
+                    <div class="col-lg-6 pt80 text-center o_colored_level"
+                        style="background-color: #d08bae;">
+                      <h3 >A great title</h3>
+                      <p >And a great subtitle</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+    </template>
+    <template id="place_masonry_into_bar" inherit_id="website.snippets" name="Place masonry into bar">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_test.masonry_snippet"
+                    t-thumbnail="/website/static/src/img/snippets_thumbs/s_masonry_block.svg"/>
+        </xpath>
+    </template>
+</odoo>

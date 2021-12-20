@@ -1,0 +1,29 @@
+<odoo>
+    <template id="image_text_snippet" name="Image Text Snippet">
+        <section class="image_text_snippet pt32 pb32 o_colored_level">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 pt16 pb16 o_colored_level">
+                        <img src="/theme_test/static/images/image_text.jpg" class="img img-fluid mx-auto"/>
+                    </div>
+                    <div class="col-lg-6 pt16 pb16 o_colored_level">
+                        <h2>Section Subtitle</h2>
+                        <p>Write one or two paragraphs describing your product or services. To be successful your content needs to be useful to your readers.</p>
+                        <p>Start with the customer – find out what they want and give it to them.</p>
+                        <p><a href="#" class="btn btn-primary mb-2">Discover more</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="insert_image-text_in_bar" inherit_id="website.snippets" name="Insert image text into bar">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+    <!--        ^^ this defines the position of the snippets-->
+            <t t-snippet="theme_test.image_text_snippet"
+                    t-thumbnail="/website/static/src/img/snippets_thumbs/s_image_text.svg"/>
+    <!--        in t-snippet we need to provide the theme_name and then
+                the ID of the snipped defined above
+                For the Thumbnail we provide PNG image snippet_name.png-->
+        </xpath>
+    </template>
+</odoo>

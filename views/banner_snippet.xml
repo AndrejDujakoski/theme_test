@@ -1,0 +1,52 @@
+<!--        <section class="green_template parallax s_parallax_is_fixed bg-black-50 o_colored_level oe_img_bg" data-scroll-background-ratio="1"-->
+<odoo>
+    <template id="green_template" name="Banner Snippet">
+        <section class="green_template parallax s_parallax_is_fixed bg-black-50" data-scroll-background-ratio="1">
+        <span class="s_parallax_bg"/>
+<!--        <span class="green_template"/>-->
+        <div class="container">
+            <div class="row align-items-stretch">
+            <div class="col-lg-4 o_colored_level shadow">
+                 <div class="jumbotron o_colored_level undefined col-lg-8">
+                    <h1>Solar Energy</h1>
+                     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                         <br></br>
+                    <a href="/services" class="mb-2 btn btn-primary rounded-circle">Read more</a>
+                 </div>
+            </div>
+              <div class="col-lg-4">
+                  <div class="jumbotron o_colored_level undefined col-lg-8">
+                      <h1>Wind Energy</h1>
+                      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                        <br></br>
+                      <a href="/services" class="mb-2 btn btn-primary rounded-circle" data-original-title="" title="" aria-describedby="tooltip48700">Read more</a>
+                 </div>
+              </div>
+              <div class="col-lg-4 o_colored_level shadow">
+                  <div class="jumbotron o_colored_level undefined col-lg-8">
+                      <h1>Hydro Energy</h1>
+                      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                        <br></br>
+                      <a href="/services" class="mb-2 btn btn-primary rounded-circle" data-original-title="" title="" aria-describedby="tooltip48700">Read more</a>
+                 </div>
+              </div>
+          </div>
+
+        </div>
+      </section>
+
+    </template>
+
+      <template id="insert_greengradient_in_bar" inherit_id="website.snippets" name="Insert green gradient into bar">
+    <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+<!--        ^^ this defines the position of the snippets-->
+        <t t-snippet="theme_test.green_template"
+                t-thumbnail="/website/static/src/img/snippets_thumbs/s_banner.svg"/>
+<!--                t-thumbnail="/theme_test/static/images/green_energy.png"/>-->
+
+<!--        in t-snippet we need to provide the theme_name and then
+            the ID of the snipped defined above
+            For the Thumbnail we provide PNG image snippet_name.png-->
+    </xpath>
+  </template>
+</odoo>

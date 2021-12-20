@@ -1,0 +1,32 @@
+<odoo>
+    <template id="features_snippet" name="Features Snippet">
+        <section class="features_snippet pt32 pb32 o_colored_level">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 pt32 pb32 text-center o_colored_level">
+                        <img src="https://api.iconify.design/fxemoji:asiaaustraliaglobe.svg"/>
+                        <h3 class="o_default_snippet_text">First Feature</h3>
+                        <p class="o_default_snippet_text">Tell what's the value for the <br></br>customer for this feature.</p>
+                    </div>
+                    <div class="col-lg-4 pt32 pb32 text-center o_colored_level">
+                        <img src="https://api.iconify.design/noto:deciduous-tree.svg"/>
+
+                        <h3 class="o_default_snippet_text">Second Feature</h3>
+                        <p class="o_default_snippet_text">Write what the customer would like to know, <br></br>not what you want to show.</p>
+                    </div>
+                    <div class="col-lg-4 pt32 pb32 text-center o_colored_level">
+                        <img src="https://api.iconify.design/noto:herb.svg"/>
+                        <h3 class="o_default_snippet_text">Third Feature</h3>
+                        <p class="o_default_snippet_text">A small explanation of this great <br></br>feature, in clear words.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="place_features_into_bar" inherit_id="website.snippets" name="Place features into bar">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_test.features_snippet"
+                    t-thumbnail="/website/static/src/img/snippets_thumbs/s_features.svg"/>
+        </xpath>
+    </template>
+</odoo>

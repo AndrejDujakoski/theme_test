@@ -1,0 +1,28 @@
+<odoo>
+    <template id="bigboxes_snippet" name="BigBoxes Snippet">
+        <section class="bigboxes_snippet">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 o_cc o_cc3 text-center o_colored_level">
+                        <img class="img_box" src="https://api.iconify.design/noto:recycling-symbol.svg"/>
+                        <h2>A color block</h2>
+                        <p>Color blocks are a simple and effective way to <b>present and highlight your content</b>. Choose an image or a color for the background. You can even resize and duplicate the blocks to create your own layout. Add images or icons to customize the blocks.</p>
+                        <a href="#" class="btn btn-primary mb-2">More Details</a>
+                    </div>
+                    <div class="col-lg-6 o_cc o_cc5 text-center o_colored_level">
+                        <img class="img_box" src="https://api.iconify.design/fxemoji:americasglobe.svg"/>
+                        <h2>Another color block</h2>
+                        <p>Color blocks are a simple and effective way to <b  >present and highlight your content</b>. Choose an image or a color for the background. You can even resize and duplicate the blocks to create your own layout. Add images or icons to customize the blocks.</p>
+                        <a href="#" class="btn btn-primary mb-2">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="place_boxes_into_bar" inherit_id="website.snippets" name="Place boxes into bar">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_test.bigboxes_snippet"
+                    t-thumbnail="/website/static/src/img/snippets_thumbs/s_color_blocks_2.svg"/>
+        </xpath>
+    </template>
+</odoo>

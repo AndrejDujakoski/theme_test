@@ -1,0 +1,73 @@
+<odoo>
+  <template id="green_energy_snippet" name="Green Energy Snippet">
+
+<!--Pocnuvame so sliki i posle nadolu mu davame da pisi nesto-->
+<section class="green_energy_snippet">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center pb224 pt224"
+                     style="background-image: url('/theme_test/static/images/green_energy.png');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 80% 100%;
+                            ">
+                  <p><br></br></p>
+                </div>
+                <div class="col-lg-6 o_colored_level">
+                    <div class="row h-100">
+                        <div class="col-lg-6 pt24 pb8 text-center" data-name="Block"
+                             style="background-image: url('/theme_test/static/images/green_energy_wind_3.png');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;">
+                            <h3>Wind Power</h3>
+                            <p>And a great text about wind power</p>
+                            <a href="#" class="btn btn-primary mb-2 o_default_snippet_text">More Details</a>
+                        </div>
+                        <div class="col-lg-6 pt24 pb8 text-center" data-name="Block"
+                            style="background-image: url('/theme_test/static/images/green_energy_solar.jpg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;">
+                            <h3 class="o_default_snippet_text">Solar Power</h3>
+                            <p class="o_default_snippet_text">And a great text about solar power</p>
+                            <a href="#" class="btn btn-primary mb-2 o_default_snippet_text">More Details</a>
+                        </div>
+                        <div class="col-lg-6 pt24 pb8 text-center" data-name="Block"
+                            style="background-image: url('/theme_test/static/images/green_energy_water_2.png');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;">
+                            <h3 class="o_default_snippet_text">Hydro Power</h3>
+                            <p class="o_default_snippet_text">And a great text about hydro power</p>
+                            <a href="#" class="btn btn-primary mb-2 o_default_snippet_text">More Details</a>
+                        </div>
+                        <div class="col-lg-6 pt24 pb8 text-center" data-name="Block"
+                            style="background-image: url('/theme_test/static/images/green_energy_geothermal.png');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;">
+                            <h3 class="o_default_snippet_text">Geothermal Power</h3>
+                            <p class="o_default_snippet_text">And a great text about geothermal power</p>
+                            <a href="#" class="btn btn-primary mb-2 o_default_snippet_text">More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+  <template id="insert_green_in_bar" inherit_id="website.snippets" name="Insert green into bar">
+    <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+<!--        ^^ this defines the position of the snippets-->
+        <t t-snippet="theme_test.green_energy_snippet"
+                t-thumbnail="/theme_test/static/images/green_energy.png"/>
+<!--        in t-snippet we need to provide the theme_name and then
+            the ID of the snipped defined above
+            For the Thumbnail we provide PNG image snippet_name.png-->
+    </xpath>
+  </template>
+
+</odoo>
+

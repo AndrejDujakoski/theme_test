@@ -1,0 +1,86 @@
+<odoo>
+    <template id="quotes_snippet" name="Quotes Snippet">
+        <section class="s_quotes_carousel_wrapper o_colored_level">
+            <div id="myCarousel" class="s_quotes_carousel s_carousel_default carousel slide bg-200" data-interval="10000">
+    
+                <ol class="carousel-indicators o_we_no_overlay">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"/>
+                    <li data-target="#myCarousel" data-slide-to="1"/>
+                    <li data-target="#myCarousel" data-slide-to="2"/>
+                </ol>
+    
+                <div class="carousel-inner">
+    
+                    <div class="carousel-item active pt80 pb80 o_colored_level"
+                         style="background-image: url('/theme_test/static/images/quotes_image_1.jpg');">
+                        <div class="container">
+                            <blockquote class="s_blockquote s_blockquote_classic blockquote mx-auto w-50" >
+                                <i class="fa fa-1x fa-quote-left rounded float-left bg-o-color-2 s_blockquote_icon"/>
+                                <div class="s_blockquote_content o_cc1">
+                                    <p>Write a quote here from one of your customers. Quotes are a great way to build confidence in your products or services.</p>
+                                    <footer class="blockquote-footer">
+                                        <img src="/web/image/website.s_quotes_carousel_demo_image_3"
+                                             class="s_blockquote_avatar img rounded-circle mr-2"/>
+                                        <span class="s_blockquote_author o_default_snippet_text"><b>Jane DOE</b> • CEO of MyCompany</span>
+                                    </footer>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item pt80 pb80 oe_img_bg o_colored_level"
+                         style="background-image: url('/theme_test/static/images/quotes_image_2.jpg');">
+                        <div class="container">
+                            <blockquote class="s_blockquote s_blockquote_classic blockquote mr-auto w-50" >
+                                <i class="fa fa-1x fa-quote-left rounded float-left bg-o-color-2 s_blockquote_icon"/>
+                                <div class="s_blockquote_content o_cc1">
+                                    <p>Write a quote here from one of your customers. Quotes are a great way to build confidence in your products or services.</p>
+                                    <footer class="blockquote-footer">
+                                        <img src="/web/image/website.s_quotes_carousel_demo_image_4"
+                                             class="s_blockquote_avatar img rounded-circle mr-2"/>
+                                        <span class="s_blockquote_author o_default_snippet_text"><b>John DOE</b> • CEO of MyCompany</span>
+                                    </footer>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item pt80 pb80 oe_img_bg o_colored_level"
+                         style="background-image: url('/theme_test/static/images/quotes_image_3.jpg');
+                                background-position: 50%;">
+                        <div class="container">
+                            <blockquote class="s_blockquote s_blockquote_classic blockquote ml-auto w-50" >
+                                <i class="fa fa-1x fa-quote-left rounded float-left bg-o-color-2 s_blockquote_icon"/>
+                                <div class="s_blockquote_content o_cc1">
+                                    <p>Write a quote here from one of your customers. Quotes are a great way to build confidence in your products or services.</p>
+                                    <footer class="blockquote-footer">
+                                        <img src="/web/image/website.s_quotes_carousel_demo_image_5"
+                                             class="s_blockquote_avatar img rounded-circle mr-2"/>
+                                        <span class="s_blockquote_author o_default_snippet_text"><b>Iris DOE</b> • CEO of MyCompany</span>
+                                    </footer>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-control-prev o_not_editable o_we_no_overlay" data-target="#myCarousel"
+                     data-slide="prev" role="img" aria-label="Previous" title="Previous" contenteditable="false">
+                    <span class="carousel-control-prev-icon"/>
+                    <span class="sr-only o_default_snippet_text">Previous</span>
+                </div>
+                <div class="carousel-control-next o_not_editable o_we_no_overlay" data-target="#myCarousel"
+                     data-slide="next" role="img" aria-label="Next" title="Next" contenteditable="false">
+                    <span class="carousel-control-next-icon"/>
+                    <span class="sr-only o_default_snippet_text">Next</span>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="insert_quotes_in_bar" inherit_id="website.snippets" name="Insert quotes into bar">
+        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_test.quotes_snippet"
+                    t-thumbnail="/website/static/src/img/snippets_thumbs/s_quotes_carousel.svg"/>
+        </xpath>
+    </template>
+</odoo>

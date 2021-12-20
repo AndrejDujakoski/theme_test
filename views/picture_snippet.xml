@@ -1,0 +1,25 @@
+<odoo>
+    <template id="picture_snippet" name="Picture Snippet">
+        <section class="picture_snippet bg-200 pt48 pb24 o_colored_level">
+            <div class="container">
+                <h2 class="o_default_snippet_text">A punchy Headline</h2>
+                <p  class="o_default_snippet_text">Choose a vibrant image and write an inspiring paragraph about it.<br></br> It does not have to be long, but it should reinforce your image.</p>
+                <p ><br> </br></p>
+                <div class="row s_nb_column_fixed">
+                    <div class="col-lg-10 offset-lg-1 pb24 o_colored_level" style="text-align: center;">
+                        <figure class="figure">
+                            <img src="/theme_test/static/images/picture_snippet.jpg" class="figure-img img-thumbnail padding-large"/>
+                            <figcaption class="figure-caption text-muted py-3 o_default_snippet_text">Add a caption to enhance the meaning of this image.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="place_picture_into_bar" inherit_id="website.snippets" name="Place picture into bar">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_test.picture_snippet"
+                    t-thumbnail="/website/static/src/img/snippets_thumbs/s_picture.svg"/>
+        </xpath>
+    </template>
+</odoo>

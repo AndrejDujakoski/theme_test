@@ -1,0 +1,42 @@
+{
+    'name': 'onboarding_theme',
+    'description': 'Learing to build a theme as part of '
+                   'the onboarding for SimplifyERP',
+    'version': '1.0',
+    'author': 'Andrej Dujakoski',
+    'category': 'Theme/Website',
+
+    'depends': ['website'],
+    'data': [
+        'views/odoo_theme.xml',
+        'views/extend_header.xml',
+        'views/services_page.xml',
+        'views/assets_link_css.xml',
+        'views/snippets.xml',
+        'views/snippets_options.xml',
+        'views/banner_snippet.xml',
+        'views/cover_snippet.xml',
+        'views/text_image_snippet.xml',
+        'views/carousel_snippet.xml',
+        'views/image_text_snippet.xml',
+        'views/numbers_snippet.xml',
+        'views/picture_snippet.xml',
+        'views/columns_snippet.xml',
+        'views/bigboxes_snippet.xml',
+        'views/features_snippet.xml',
+        'views/masonry_snippet.xml',
+        'views/medialist_snippet.xml',
+        'views/showcase_snippet.xml',
+        'views/parallax_snippet.xml',
+        'views/pricelist_snippet.xml',
+        'views/quotes_snippet.xml',
+        # 'views/green_energy_snippet.xml',
+        # 'views/jumbo_snippet.xml',
+        # 'views/jumboTwo_snippet.xml',
+
+    ],
+    'images': [
+        'static/images/picture_snippet.jpg',
+        'static/images/column_image_1.jpg',
+    ],
+}

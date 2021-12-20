@@ -1,0 +1,15 @@
+<odoo>
+    <template id="parallax_snippet" name="Parallax Snippet">
+        <section class="parallax_snippet parallax s_parallax_is_fixed bg-black-50 o_half_screen_height o_colored_level" data-scroll-background-ratio="1">
+            <span class="s_parallax_bg oe_img_bg" style="background-image: url('/theme_test/static/images/parallax_image.jpg'); background-position: 50% 75%;"/>
+            <div class="o_we_bg_filter bg-black-50"/>
+            <div class="oe_structure oe_empty" data-editor-message="DRAG BUILDING BLOCKS HERE" contenteditable="false"/>
+    </section>
+    </template>
+    <template id="place_parallax_into_bar" inherit_id="website.snippets" name="Place parallax into bar">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_test.parallax_snippet"
+                    t-thumbnail="/website/static/src/img/snippets_thumbs/s_parallax.svg"/>
+        </xpath>
+    </template>
+</odoo>

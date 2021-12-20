@@ -1,0 +1,19 @@
+<!--Used to create options for the snippet so the end user can edit it-->
+<!--When we click on the snipped this will add an option menu with defined options-->
+<odoo>
+    <template id="custom_snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-selector="section,[class^='col-lg-4']">
+<!--                will be applied to all classes "col-lg-4"-->
+<!--                it will also show up in the main option menu for the snippet-->
+<!--                can be used for selecting ID, tags, classes-->
+                <we-select string="Custom_options">
+<!--                    this is a drop down section-->
+                    <we-button data-select-class="new">new</we-button>
+                    <we-button data-select-class="custom">custom</we-button>
+                    <we-button data-select-class="none">none</we-button>
+                </we-select>
+            </div>
+        </xpath>
+    </template>
+</odoo>

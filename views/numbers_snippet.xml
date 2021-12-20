@@ -1,0 +1,33 @@
+<odoo>
+    <template id="numbers_snippet" name="Numbers Snippet">
+        <section class="numbers_snippet o_cc o_cc2 pt24 pb24 o_colored_level">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 text-center pt24 pb24 o_colored_level">
+                        <span class="snippet_number display-4 o_default_snippet_text">12</span>
+                        <h6 class="h6_text">Useful options</h6>
+                    </div>
+                    <div class="col-lg-3 text-center pt24 pb24 o_colored_level">
+                        <span class="snippet_number display-4 o_default_snippet_text">45</span>
+                        <h6 class="h6_text">Beautiful snippets</h6>
+                    </div>
+                    <div class="col-lg-3 text-center pt24 pb24 o_colored_level">
+                        <span class="snippet_number display-4 o_default_snippet_text">8</span>
+                        <h6 class="h6_text">Amazing pages</h6>
+                    </div>
+                    <div class="col-lg-3 text-center pt24 pb24 o_colored_level">
+                        <span class="snippet_number display-4 o_default_snippet_text">37</span>
+                        <h6 class="h6_text">Outstanding images</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="place_numbers_into_bar" inherit_id="website.snippets" name="Place numbers into bar">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_test.numbers_snippet"
+                    t-thumbnail="/website/static/src/img/snippets_thumbs/s_numbers.svg"/>
+        </xpath>
+    </template>
+</odoo>

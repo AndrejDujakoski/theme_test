@@ -1,0 +1,28 @@
+<odoo>
+    <template id="text_image_snippet" name="Text Image Snippet">
+        <section class="text_image_snippet o_colored_level" >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 o_colored_level">
+              <h2>A Section Subtitle</h2>
+              <p>Write one or two paragraphs describing your product or services.
+                  To be successful your content needs to be useful to your readers.</p>
+              <p>Start with the customer – find out what they want and give it to them.</p>
+              <p>
+                <a href="#" class="btn btn-primary mb-2">Learn more</a>
+              </p>
+            </div>
+            <div class="col-lg-6 o_colored_level">
+                <img src="/theme_test/static/images/text_image.jpg" class="img img-fluid mx-auto" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    <template id="insert_textimage_in_bar" inherit_id="website.snippets" name="Insert text image into bar">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_test.text_image_snippet"
+                    t-thumbnail="/website/static/src/img/snippets_thumbs/s_text_image.svg"/>
+        </xpath>
+    </template>
+</odoo>

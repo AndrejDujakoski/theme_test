@@ -1,0 +1,43 @@
+<odoo>
+<template id="s_testimonial" name="Testimonial snippet">
+<!--    <link rel="stylesheet" src="https://icones.js.org/collection/flat-color-icons"/>-->
+    <section class="s_testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="col-lg-8 offset-lg-4">
+                        <h3>Client Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="col-lg-8 offset-lg-4">
+                        <h3>Client Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="col-lg-8 offset-lg-4">
+                        <h3>Client Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+<!--    this is the snipped we created, and we want this to be added to the page-->
+
+<template id="place_into_bar" inherit_id="website.snippets" name="Place into bar">
+    <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+<!--        ^^ this defines the position of the snippets-->
+        <t t-snippet="theme_test.s_testimonial"
+                t-thumbnail="/theme_test/static/images/snippet_default.png"/>
+<!--        in t-snippet we need to provide the theme_name and then
+            the ID of the snipped defined above
+            For the Thumbnail we provide PNG image snippet_name.png-->
+    </xpath>
+</template>
+<!--    we use this template code to add the custom snippet to the page-->
+
+</odoo>

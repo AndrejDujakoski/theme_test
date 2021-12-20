@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<!-- === Adds a URL for Services Page === -->
+<record id="services_page" model="website.page">
+    <field name="name">Services page</field>
+    <field name="website_published">True</field>
+    <field name="url">/services</field>
+    <field name="type">qweb</field>
+    <field name="key">theme_tutorial.services_page</field>
+    <field name="arch" type="xml">
+        <t t-name="theme_tutorial.services_page_template">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="container">
+                        <h1>Our Services</h1>
+                        <ul class="services">
+                            <li>Cloud Hosting</li>
+                            <li>Support</li>
+                            <li>Unlimited space</li>
+                        </ul>
+                    </div>
+                     <!-- === Snippets' area === -->
+                     <!-- === we add this so we can use the snippets from Edit === -->
+                    <div class="oe_structure" />
+                </div>
+            </t>
+        </t>
+    </field>
+</record>
+<!-- we create a new record to add the custom page to the main page header    -->
+<!--    we do this for an easy access to the new created page -->
+    <record id="service_page_link" model="website.menu">
+        <field name="name">Service</field>
+        <field name="page_id" ref="services_page"/>
+        <!--        ref="services_page is taken from the top record that we link"-->
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">90</field>
+<!--        sequence of Home is 10 -->
+<!--        sequence of Contact Us is 60 -->
+<!--        sequence 20,30,40,50,60,70 puts it in second place-->
+<!--        probably bugged, Service should be last or in third place -->
+    </record>
+
+ </odoo>

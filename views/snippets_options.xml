@@ -1,0 +1,21 @@
+<odoo>
+    <template id="custom_snippet-options" inherit_id="website.snippet_options">
+<!--        we have to inherit from this model-->
+        <xpath expr="." position="inside">
+            <div data-selector="section,[class^='col-lg-4']">
+<!--                we can specify which tag,id or class we want to select here-->
+<!--                section puts it for all sections of the snippet-->
+<!--                this puts the drop down menu in the main option for the snippet-->
+<!--                also puts it in the col options for the snippet-->
+                <we-select string="Custom_options">
+                    <we-button data-select-class="color1">Color 1</we-button>
+                    <we-button data-select-class="color2">Color 2</we-button>
+                    <we-button data-select-class="color3">Color 3</we-button>
+                    <we-button data-select-class="backgroundcolor">Choose Color</we-button>
+                    <we-button data-select-class="none">None</we-button>
+<!--                    each we-button is an option in the dropdown menu-->
+                </we-select>
+            </div>
+        </xpath>
+    </template>
+</odoo>
